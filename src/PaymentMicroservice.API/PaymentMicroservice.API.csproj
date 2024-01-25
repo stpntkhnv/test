@@ -1,0 +1,30 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <InvariantGlobalization>true</InvariantGlobalization>
+      <UserSecretsId>1acd990b-c783-4981-8201-5509c5fd83eb</UserSecretsId>
+  </PropertyGroup>
+
+    <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+      <DocumentationFile>bin\Debug\PaymentMicroservice.API.xml</DocumentationFile>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="FluentValidation" Version="11.9.0" />
+        <PackageReference Include="FluentValidation.AspNetCore" Version="11.3.0" />
+        <PackageReference Include="Humanizer" Version="2.14.1" />
+        <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="8.0.0" />
+        <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\PaymentMicroservice.Application\PaymentMicroservice.Application.csproj" />
+      <ProjectReference Include="..\PaymentMicroservice.Clients\PaymentMicroservice.Clients.csproj" />
+      <ProjectReference Include="..\PaymentMicroservice.Contracts\PaymentMicroservice.Contracts.csproj" />
+      <ProjectReference Include="..\PaymentMicroservice.Core\PaymentMicroservice.Core.csproj" />
+    </ItemGroup>
+
+</Project>
